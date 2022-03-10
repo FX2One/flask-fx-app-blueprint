@@ -5,26 +5,22 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="">Home <span class="sr-only"></span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('main_home.home_page') }}">Home <span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">Market</a>
+        <a class="nav-link" href="">Items</a>
       </li>
     </ul>
     <ul class="nav navbar-nav">
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">Welcome</a>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="">Logout</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">Login</a>
+        <a class="nav-link" href="{{ url_for('account.login_page') }}">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">Register</a>
+        <a class="nav-link" href="{{ url_for('account.register_page') }}">Register</a>
       </li>
     </ul>
 

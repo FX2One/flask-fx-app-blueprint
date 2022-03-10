@@ -3,6 +3,7 @@ from app.account.forms import RegisterForm, LoginForm
 
 account = Blueprint('account', __name__, template_folder='templates')
 
+
 @account.route('/register', methods=['GET','POST'])
 def register_page():
     form = RegisterForm()

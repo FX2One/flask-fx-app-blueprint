@@ -5,6 +5,7 @@ from flask_bcrypt import Bcrypt
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from app.account.views import account
+from app.main.views import main_home
 
 db = SQLAlchemy()
 login = LoginManager()
@@ -38,6 +39,7 @@ def configure_user_loader(app):
 def create_app():
     app = Flask(__name__)
     app.register_blueprint(account)
+    app.register_blueprint(main_home)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///example.db'
     app.config['SECRET_KEY'] = 'ec9439cfc6c796ae2029594d'
     register_extensions(app)
