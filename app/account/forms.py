@@ -14,7 +14,7 @@ class RegisterForm(FlaskForm):
     password = PasswordField('Password', validators=[InputRequired(),
                                                  Length(min=6, max=254)])
 
-    confirm = PasswordField('Repeat Password',
+    confirm = PasswordField('Confirm Password',
                         validators=[InputRequired(),
                                     EqualTo('password')])
 
