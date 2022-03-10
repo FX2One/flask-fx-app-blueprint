@@ -6,13 +6,13 @@ Register Page
 {% block content %}
 <body class="text-center">
     <div class="container">
-        <form method="POST" class="form-register" style="color:#d1d1d1">
+        <form method="POST" class="form-register">
             {{ form.hidden_tag() }}
             <img class="mb-4" src="" alt="">
             <h1 class="h3 mb-3 font-weight-normal">
                 Register Your Account
             </h1>
-            
+
             <br>
             <h5>{{ form.username.label() }}</h5>
             {{ form.username(class="form-control", placeholder="User Name") }}
