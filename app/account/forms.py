@@ -2,6 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, EmailField, ValidationError
 from wtforms.validators import Email, InputRequired, Length, EqualTo
 
+
 class RegisterForm(FlaskForm):
     username = StringField('Username',
                            validators=[InputRequired()])
@@ -28,4 +29,3 @@ class LoginForm(FlaskForm):
 
     submit = SubmitField('Submit')
 
-    

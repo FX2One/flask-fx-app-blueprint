@@ -1,11 +1,14 @@
 from flask import Blueprint, render_template
+from app.account.forms import RegisterForm, LoginForm
 
 account = Blueprint('account', __name__, template_folder='templates')
 
-@account.route('/register')
+@account.route('/register', methods=['GET','POST'])
 def register_page():
-    return render_template('account/register.html')
+    form = RegisterForm()
+    return render_template('account/register.html', form=form)
 
-@account.route('/login')
+@account.route('/login', methods=['GET','POST'])
 def login_page():
-    return render_template('account/login.html')
+    form = LoginForm()
+    return render_template('account/login.html', form=form)
